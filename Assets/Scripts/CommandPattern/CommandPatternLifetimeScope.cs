@@ -2,7 +2,7 @@ using DesignPatterns.Command;
 using VContainer;
 using VContainer.Unity;
 
-public class GameLifetimeScope : LifetimeScope
+public class CommandPatternLifetimeScope : LifetimeScope
 {
     protected override void Configure(IContainerBuilder builder)
     {
