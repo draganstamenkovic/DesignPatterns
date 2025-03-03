@@ -5,47 +5,35 @@ using VContainer.Unity;
 
 public class InputHandler : ITickable
 {
-    private Stack<ICommand> _commandHistory = new();
-    private readonly IPlayerController _playerController;
-    private float _moveSpeed = 5f;
-    
-    
-    public InputHandler(IPlayerController playerController)
+    private readonly ICommandController _commandController;
+
+    public InputHandler(ICommandController commandController)
     {
-        _playerController = playerController;
+        _commandController = commandController;
     }
-    
+
     public void Tick()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            ICommand command = new MoveCommand(_playerController, new Vector3(0, 0, 1), _moveSpeed);
-            command.Execute();
-            _commandHistory.Push(command);
+            _commandController.Up();
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            ICommand command = new MoveCommand(_playerController, new Vector3(-1, 0, 0), _moveSpeed);
-            command.Execute();
-            _commandHistory.Push(command);
+            _commandController.Left();
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            ICommand command = new MoveCommand(_playerController, new Vector3(0, 0, -1), _moveSpeed);
-            command.Execute();
-            _commandHistory.Push(command);
+            _commandController.Down();
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            ICommand command = new MoveCommand(_playerController, new Vector3(1, 0, 0), _moveSpeed);
-            command.Execute();
-            _commandHistory.Push(command);
+            _commandController.Right();
         }
-        else if (Input.GetKeyDown(KeyCode.Z) && _commandHistory.Count > 0)
+        else if (Input.GetKeyDown(KeyCode.Z))
         {
-            ICommand lastCommand = _commandHistory.Pop();
-            lastCommand.Undo();
+            _commandController.Undo();
         }
     }
 }
