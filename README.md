@@ -10,6 +10,8 @@ Design patterns that I covered here are:
  - Prototype
  - Factory Method
 
+## Creational Design Patterns
+
 ### Command Pattern
 The Command Pattern is a behavioral design pattern that encapsulates a request as an object, thereby allowing for parameterization of clients with different requests, queuing of requests, and support for undoable operations. It is an excellent choice for handling player input, implementing replay systems, or managing action histories in games or applications.
 
@@ -23,5 +25,24 @@ The Prototype Pattern is a creational design pattern that allows you to create c
 In game development, the Prototype Pattern is often used to create instances of objects that share similar properties but require slight modifications. A great analogy for this is the use of Prefabs in Unity. Prefabs act as templates for game objects, and you can create variants of these Prefabs by modifying their properties (e.g., changing the color, size, or behavior of an enemy character).
 
 For example, imagine you have a base enemy Prefab with default attributes like health, speed, and attack power. Using the Prototype Pattern, you can create multiple variants of this enemy by cloning the base Prefab and adjusting its properties. This approach saves time and resources, as you don’t need to recreate the entire object from scratch for each variant.
+
+### Factory Method Pattern
+
+**The Factory Method pattern is a creational design pattern that provides an interface for creating objects without specifying their concrete classes. It defines a method that subclasses can override to create specific object types.**
+
+The main purposes of the Factory Method pattern are:
+
+- To delegate object creation to subclasses, allowing them to decide which specific class to instantiate
+- To encapsulate object creation logic, hiding implementation details from client code
+- To promote loose coupling by allowing code to work with abstract types rather than concrete implementations
+- To support the Open/Closed Principle by making it easy to add new types without modifying existing code
+
+Factory Method is particularly useful when:
+
+- You don't know ahead of time what class of objects you need to create
+- You want to let subclasses decide what objects to create
+- You want to ensure that a class can only have one instance of each subclass
+- You want to localize the knowledge of which class gets created
+
 ## NOTE
 - I created this repository with examples for design patterns i used before in my project as a reminder, cause thank god we all forget sometimes. You might find some examples here usefull or otherwise, but if you find it otherwise i encourage you to open the issue.
