@@ -17,7 +17,7 @@ The Command Pattern is a behavioral design pattern that encapsulates a request a
 
 In the example, a Stack is used to manage commands. When a new command is executed, it is pushed onto the stack using Stack.Push(). To undo the most recent command, the Stack.Pop() method is called, which removes and reverts the latest command. This approach is particularly useful for implementing features like "undo" functionality in text editors, game move reversals, or step-by-step replay systems.
 
-For instance, in a game, you could use the Command Pattern to handle player movements. Each movement command (e.g., "Move Forward," "Jump," "Attack") would be encapsulated as an object. These commands can then be stored in a stack, allowing the player to undo their last action or replay a sequence of actions seamlessly.
+For instance, in a game, you could use the Command Pattern to handle player movements. Each movement command (e.g Forward W, Back S, Left A, Right D) would be encapsulated as an object. These commands can then be stored in a stack, allowing the player to undo their last action or replay a sequence of actions seamlessly.
 
 ### Prototype Pattern
 The Prototype Pattern is a creational design pattern that allows you to create copies of existing objects without making your code dependent on their specific classes. This is particularly useful when creating new objects is more expensive or complex than copying existing ones.
@@ -43,6 +43,8 @@ Factory Method is particularly useful when:
 - You want to let subclasses decide what objects to create
 - You want to ensure that a class can only have one instance of each subclass
 - You want to localize the knowledge of which class gets created
+
+I used more generic version in project here. So i don't need to create a lot of boiler plate code, like creating class for each factory, but rather using `IEnemyFactory` interface to return `IEnemy` to return type of the enemy base on what we selected in dropdown menu.
 
 ## NOTE
 - I created this repository with examples for design patterns i used before in my project as a reminder, cause thank god we all forget sometimes. You might find some examples here usefull or otherwise, but if you find it otherwise i encourage you to open the issue.
