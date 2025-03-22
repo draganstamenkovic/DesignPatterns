@@ -13,7 +13,7 @@ Design patterns that I covered here are:
 ## Creational Design Patterns
 
 ### Prototype
-** The Prototype Pattern is a creational design pattern that allows you to create copies of existing objects without making your code dependent on their specific classes. This is particularly useful when creating new objects is more expensive or complex than copying existing ones. **
+**The Prototype Pattern is a creational design pattern that allows you to create copies of existing objects without making your code dependent on their specific classes. This is particularly useful when creating new objects is more expensive or complex than copying existing ones.**
 
 In game development, the Prototype Pattern is often used to create instances of objects that share similar properties but require slight modifications. A great analogy for this is the use of Prefabs in Unity. Prefabs act as templates for game objects, and you can create variants of these Prefabs by modifying their properties (e.g., changing the color, size, or behavior of an enemy character).
 
@@ -40,7 +40,7 @@ Factory Method is particularly useful when:
 I used more generic version in project here. So i don't need to create a lot of boiler plate code, like creating class for each factory, but rather using `IEnemyFactory` interface to return `IEnemy` to return type of the enemy base on what we selected in dropdown menu.
 
 ### Builder
-** Builder pattern is really good choice when you (as the name suggests) build stuff but in the runtime. For example NPC character ally or enemy, also you can do it for similar popups which need the same design but rather needs different text. ** 
+**Builder pattern is really good choice when you (as the name suggests) build stuff but in the runtime. For example NPC character ally or enemy, also you can do it for similar popups which need the same design but rather needs different text.** 
 
 ## Behavioral Patterns
 
