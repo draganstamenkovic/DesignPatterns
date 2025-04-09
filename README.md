@@ -39,6 +39,9 @@ Factory Method is particularly useful when:
 
 I used more generic version in project here. So i don't need to create a lot of boiler plate code, like creating class for each factory, but rather using `IEnemyFactory` interface to return `IEnemy` to return type of the enemy base on what we selected in dropdown menu.
 
+### Object pool
+**An object pool essentially creates a pool of objects at initialization that are disabled and when you need an object, instead of instantiating a new one you get an already created one from the pool, just enabled.**
+
 ### Builder
 **Builder pattern is really good choice when you (as the name suggests) build stuff but in the runtime. For example NPC character ally or enemy, also you can do it for similar popups which need the same design but rather needs different text.** 
 
