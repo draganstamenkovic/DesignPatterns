@@ -26,7 +26,10 @@ namespace DesignPatterns.FactoryMethod
         private void OnSpawnButtonClicked()
         {
             if(_enemyFactory == null)
+            {
                 Debug.LogError("Enemy spawner is null");
+                return;
+            }
             var enemy = _enemyFactory.Create(_enemyTypeDropdown.value);
             enemy.Initialize();
             enemy.Attack();
