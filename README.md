@@ -50,6 +50,9 @@ I used more generic version in project here. So i don't need to create a lot of 
 ### Command Pattern
 The Command Pattern is a behavioral design pattern that encapsulates a request as an object, thereby allowing for parameterization of clients with different requests, queuing of requests, and support for undoable operations. It is an excellent choice for handling player input, implementing replay systems, or managing action histories in games or applications.
 
+![CommandPattern](https://github.com/user-attachments/assets/f5ebe996-9701-4a81-bc2d-bc31d5f3ea6c)
+<br><b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; UML class diagram of our example for Command Pattern</b>
+
 In the example, a Stack is used to manage commands. When a new command is executed, it is pushed onto the stack using Stack.Push(). To undo the most recent command, the Stack.Pop() method is called, which removes and reverts the latest command. This approach is particularly useful for implementing features like "undo" functionality in text editors, game move reversals, or step-by-step replay systems.
 
 For instance, in a game, you could use the Command Pattern to handle player movements. Each movement command (e.g Forward W, Back S, Left A, Right D) would be encapsulated as an object. These commands can then be stored in a stack, allowing the player to undo their last action or replay a sequence of actions seamlessly.
