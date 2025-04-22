@@ -15,6 +15,10 @@ Design patterns that I covered here are:
 ### Prototype
 **The Prototype Pattern is a creational design pattern that allows you to create copies of existing objects without making your code dependent on their specific classes. This is particularly useful when creating new objects is more expensive or complex than copying existing ones.**
 
+<b>UML class diagram of our example for Prototype Pattern</b>
+
+![Prototype](https://github.com/user-attachments/assets/1f4be421-bfe9-4c83-a527-daddfc7a39d5)
+
 In game development, the Prototype Pattern is often used to create instances of objects that share similar properties but require slight modifications. A great analogy for this is the use of Prefabs in Unity. Prefabs act as templates for game objects, and you can create variants of these Prefabs by modifying their properties (e.g., changing the color, size, or behavior of an enemy character).
 
 For example, imagine you have a base enemy Prefab with default attributes like health, speed, and attack power. Using the Prototype Pattern, you can create multiple variants of this enemy by cloning the base Prefab and adjusting its properties. This approach saves time and resources, as you don’t need to recreate the entire object from scratch for each variant.
@@ -50,8 +54,9 @@ I used more generic version in project here. So i don't need to create a lot of 
 ### Command Pattern
 The Command Pattern is a behavioral design pattern that encapsulates a request as an object, thereby allowing for parameterization of clients with different requests, queuing of requests, and support for undoable operations. It is an excellent choice for handling player input, implementing replay systems, or managing action histories in games or applications.
 
-![CommandPattern](https://github.com/user-attachments/assets/f5ebe996-9701-4a81-bc2d-bc31d5f3ea6c)
-<br><b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; UML class diagram of our example for Command Pattern</b>
+<b>UML class diagram of our example for Command Pattern</b>
+
+![CommandPattern](https://github.com/user-attachments/assets/ae3beb93-05ba-448f-9de7-5af5cab87862)
 
 In the example, a Stack is used to manage commands. When a new command is executed, it is pushed onto the stack using Stack.Push(). To undo the most recent command, the Stack.Pop() method is called, which removes and reverts the latest command. This approach is particularly useful for implementing features like "undo" functionality in text editors, game move reversals, or step-by-step replay systems.
 
