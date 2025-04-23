@@ -49,6 +49,10 @@ I used more generic version in project here. So i don't need to create a lot of 
 ### Builder
 **Builder pattern is really good choice when you (as the name suggests) build stuff but in the runtime. For example NPC character ally or enemy, also you can do it for similar popups which need the same design but rather needs different text.** 
 
+<b>UML class diagram of our example for Builder Pattern</b>
+
+![Builder](https://github.com/user-attachments/assets/1826f3c0-fdf7-4d17-91bf-51e5c4aa041a)
+
 ## Behavioral Patterns
 
 ### Command Pattern
