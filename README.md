@@ -26,6 +26,9 @@ For example, imagine you have a base enemy Prefab with default attributes like h
 ### Factory Method
 
 **The Factory Method pattern is a creational design pattern that provides an interface for creating objects without specifying their concrete classes. It defines a method that subclasses can override to create specific object types.**
+<b> UML class diagram of our example for Factory Method Pattern</b>
+
+![FactoryMethod](https://github.com/user-attachments/assets/126cfc29-d50d-4993-b607-893aee697bbc)
 
 The main purposes of the Factory Method pattern are:
 
