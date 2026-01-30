@@ -16,7 +16,7 @@ namespace StatePattern
         private void Awake()
         {
             _gameStateMachine = new GameStateMachine();
-            _idleState = new IdleState(_animator, _rigidbody);
+            _idleState = new IdleState(_animator);
             _runState = new RunState(_animator, _rigidbody, _movementMultiplier);
             _gameStateMachine.ChangeState(_idleState);
         }
