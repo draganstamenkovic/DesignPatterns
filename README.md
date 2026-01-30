@@ -69,6 +69,13 @@ In the example, a Stack is used to manage commands. When a new command is execut
 
 For instance, in a game, you could use the Command Pattern to handle player movements. Each movement command (e.g Forward W, Back S, Left A, Right D) would be encapsulated as an object. These commands can then be stored in a stack, allowing the player to undo their last action or replay a sequence of actions seamlessly.
 
+### State Pattern
+The state machine pattern is a behavioral design pattern that allows an object to change its behavior when its internal state changes, making it appear as if the object changed its class.
+
+<b>UML class diagram of our example for State Pattern</b>
+
+<img width="821" height="414" alt="State Machine" src="https://github.com/user-attachments/assets/0d1746e1-1a6d-4ae5-81b4-ea55fff78ae5" />
+
 
 ## NOTE
 - I created this repository with examples for design patterns i used before in my project as a reminder, cause thank god we all forget sometimes. You might find some examples here usefull or otherwise, but if you find it otherwise i encourage you to open the issue.
