@@ -74,8 +74,7 @@ The state machine pattern is a behavioral design pattern that allows an object t
 
 <b>UML class diagram of our example for State Pattern</b>
 
-<img width="821" height="414" alt="State Machine" src="https://github.com/user-attachments/assets/0d1746e1-1a6d-4ae5-81b4-ea55fff78ae5" />
-
+![State Machine](https://github.com/user-attachments/assets/63799195-cc05-470c-bc55-19e0bca600cc)
 
 ## NOTE
 - I created this repository with examples for design patterns i used before in my project as a reminder, cause thank god we all forget sometimes. You might find some examples here usefull or otherwise, but if you find it otherwise i encourage you to open the issue.
